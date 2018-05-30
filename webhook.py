@@ -74,7 +74,8 @@ def makeResponse(req):
 	speech = "The Bitcoin price  " + '\n'.join(out)
 	
 	return{
-	"speech":speech"displayText":speech,
+	"speech":speech,
+	"displayText":speech,
 	"source":"apiai-weather-webhook"
 	}
 	
