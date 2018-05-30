@@ -36,7 +36,7 @@ def webhook():
 # Helper function makeResponse
 
 def makeResponse(req):
-	result = req.get('result')
+	result = req.get('queryResult')
 	parameters = result.get('parameters')
 	bitcoin = parameters.get('bitcoin')
 	date = parameters.get('date-time')
