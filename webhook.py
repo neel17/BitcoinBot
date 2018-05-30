@@ -22,7 +22,7 @@ def webhook():
 	# silent - if set to True this methid will fall silently and return None
 	
 	req = request.get_json(silent=True, force=True)
-	print(Json.dumps(req, indent=4)
+	print(json.dumps(req, indent=4))
 	
 	# Extract paprameter value --> query the Open Weather API --> construct response --> send to Dialogflow
 	res = makeResponse(req)
