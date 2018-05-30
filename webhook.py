@@ -1,6 +1,6 @@
 import json
 import os
-import Requests
+import requests
 
 from flask import Flask
 from flask import request
@@ -22,7 +22,11 @@ def webhook():
 	# silent - if set to True this methid will fall silently and return None
 	
 	req = request.get_json(silent=True, force=True)
+<<<<<<< HEAD
 	print(json.dumps(req, indent=4))
+=======
+	print(json.dumps(req, indent=4)
+>>>>>>> 5b687c24567168e32f7673eaceca6a67aad9fd17
 	
 	# Extract paprameter value --> query the Open Weather API --> construct response --> send to Dialogflow
 	res = makeResponse(req)
