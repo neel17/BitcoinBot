@@ -1,5 +1,6 @@
 import json
 import os
+import Requests
 
 from flask import Flask
 from flask import request
@@ -51,7 +52,7 @@ def makeResponse(req):
 	base_url = 'https://api.coindesk.com/v1/bpi/historical/close.json?'
 	load_url = 'start=' + start_date + '&end=' + end_date
 	url = base_url + load_url
-	r = request.get(url)
+	r = requests.get(url)
 	json_object = r.json()
 	output_json = json_object['bpi']
 	
