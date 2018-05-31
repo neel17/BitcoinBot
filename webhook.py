@@ -78,9 +78,16 @@ def makeResponse(req):
 	speech = "The Bitcoin price  " + '\n'.join(out)
 	
 	return{
-	"speech":speech,
-	"displayText":speech,
+	# V1 return format
+	#"speech":speech,
+	#"displayText":speech,
+	#"source":"apiai-weather-webhook"
+	
+	# V2 return format
+	"fulfillmentText":speech,
+	"fulfillmentText":speech,
 	"source":"apiai-weather-webhook"
+	
 	}
 	
 if __name__ == '__main__':
