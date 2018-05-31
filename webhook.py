@@ -46,7 +46,8 @@ def makeResponse(req):
 	date = parameters.get('date-time')
 	
 	# Condition for extrating the date-time attributes
-	if date.get('startDate'):
+	if 'startDate' in date:
+	#if date.get('startDate'):
 		start_date = date.get('startDate')[:10]
 		end_date = date.get('endDate')[:10]
 	else:
