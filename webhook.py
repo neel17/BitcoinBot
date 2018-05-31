@@ -36,7 +36,11 @@ def webhook():
 # Helper function makeResponse
 
 def makeResponse(req):
-	result = req.get('queryResult')
+	# For V1 API Call
+	result = req.get('result')
+	
+	# For V2 API Call
+	#result = req.get('queryResult') 
 	parameters = result.get('parameters')
 	bitcoin = parameters.get('bitcoin')
 	date = parameters.get('date-time')
