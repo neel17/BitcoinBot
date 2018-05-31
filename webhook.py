@@ -36,7 +36,7 @@ def webhook():
 # Helper function makeResponse
 
 def makeResponse(req):
-	result = req.get('result')
+	result = req.get('queryResult')
 	parameters = result.get('parameters')
 	bitcoin = parameters.get('bitcoin')
 	date = parameters.get('date-time')
@@ -82,6 +82,6 @@ def makeResponse(req):
 if __name__ == '__main__':
 	port = int(os.getenv('PORT', 5000))
 	print("Starting app on port %d" % port)
-	app.run(debug=Flase, port=port, host='0.0.0.0')
+	app.run(debug=False, port=port, host='0.0.0.0')
 	
 	
